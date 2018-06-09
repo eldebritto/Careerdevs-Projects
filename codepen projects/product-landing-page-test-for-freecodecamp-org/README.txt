@@ -1,3 +1,3 @@
 A Pen created at CodePen.io. You can find this one at https://codepen.io/edebritto/pen/eKddEP.
 
- Tribute Page Test for freecodecamp.org
+ Product Landing Page Test for freecodecamp.org
