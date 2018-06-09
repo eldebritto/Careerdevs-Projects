@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Documentation  Page Test:  for freecodecamp.org</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <nav id="navbar">
+  <header>CSS: Styling Text Documentation</header>
+  <ul> 
+    <a class="nav-link" href="#Introduction" rel="internal"><li>Introduction</li></a>
+    <a class="nav-link" href="#Text_Colour" rel="internal"><li>Text Colour</li></a>
+    <a class="nav-link" href="#Typeface" rel="internal"><li>Typeface</li></a>
+    <a class="nav-link" href="#Text_Size" rel="internal"><li>Text Size</li></a>
+    <a class="nav-link" href="#Special_Effects" rel="internal"><li>Special Effects</li></a>
+    <a class="nav-link" href="#Text_Alignment" rel="internal"><li>Text Alignment</li></a>
+    <a class="nav-link" href="#Text_Layout" rel="internal"><li>Text Layout</li></a>
+    <a class="nav-link" href="#Shorthand_Properties" rel="internal"><li>Shorthand Properties</li></a>
+    <a class="nav-link" href="#Lists" rel="internal"><li>Lists</li></a>
+    <a class="nav-link" href="#Reference" rel="internal"><li>Reference</li></a>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>
+      <p>Before having the control that CSS gives you over text, you were severely limited in how you could present your words. Yeah, you could use the &lt;font&gt; tag to change the colour and typeface of the text, but sizing was hampered by the fact that you could only use the pre-defined font sizes. Other effects like boldness and strike-throughs were possible in only basic forms through more HTML tags. Now, you have complete control over how your text looks.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Text_Colour">
+    <header>Text Colour</header>
+    <article>
+      <p>You’ve already seen this being used in the examples in the preceding tutorials, so you should know it now. To change the colour of your text you simply use the property, color, like so:</p>
+<code>
+h2 {color: silver; }
+
+a:active {color: #ff0000; }
+      </code>
+<p>As in every part of web design, you can specify the colour as a HEX code or a named colour value.</p>
+    </article>
+  </section>
+  <section class="main-section" id="Typeface">
+    <header>Typeface</header>
+    <article>
+      <p>The property for defining the typeface (or font, whatever), is font-family. You can define a list of alternative fonts like we used to do with the &lt;font&gt; tag; and as always, you’re advised to leave the last entry as a general family of fonts. A typical line using this command would be:</p>
+<code>
+h3 {font-family: Verdana, Arial, Helvetica, sans-serif; }
+        </code>
+<p>Your browser deals with this the same way as it did with font face definitions before: it will keep going down the list of faces you’re specifying until it finds one that’s installed on the user’s system. If all else fails, your final family should cause the text to display in at least a font similar to what you wanted.</p>
+
+<p>sourcetip: if any of your fonts have multiple-word names, wrap some double-quotes around the whole name, to make it clear to your browser that they’re all part of the same entity.</p>
+      <code>
+        p {font-family: Georgia, "Times New Roman", serif; }
+      </code>
+    </article>
+  </section>
+  <section class="main-section"id="Text_Size">
+    <header>Text Size</header>
+    <article>
+      <p>CSS gives you full control over the size of your text. Using CSS, you can set your text in any point size, the same way that all other print and graphic designers can already. This is immediately great for creating text bigger than what was originally possible (going up to size 7 with &lt;font size&gt; — the equivalent of only 36pt text). Now you can get infinitely big text.
+        </p>
+<p>
+It also means you can be far more precise with your font sizes — never before have you been able to get 11pt text, which lay between sizes 2 and 3.
+        </p>
+<p>To size your text you use the font-size property, and have a number of different units and methods with which to set the exact size. They are:</p>
+      <li>units: ems, points and pixels</li>
+      <li>pre-defined keywords</li>
+      <li>percentages</li>
+      <p>As we will see, some of these units are better than others for certain purposes.</p>
+      <h4>Ems</h4>
+      <p>Ems are my preferred unit of sizing. They are text units that set the size of text relative to the surrounding text. They are fully resizable, so that if you choose a text size that a user is not comfortable with, they are able to resize the text in their browser so that it becomes readable (the option is under View > Text Size). Default text is set at 1em, so you set other text relative to this value. For instance:</p>
+      <code>p {font-size: 0.9em; }
+strong {font-size: 1.5em; }</code>
+      <p>This CSS code sets the font size of all text in paragraphs to be slightly smaller than a user’s default text size. If you put any text between strong tags, which is already in a paragraph, this text would appear one and a half times the size of the text in its parent element (therefore, 1.5 times the size of text in paragraphs).</p>
+<p>
+Exacting designers will bemoan the fact that their text is sized differently in different browsers, due to the differences of some user’s default text size. However, this is missing the point: users should have the ability to resize text. If a user has explicitly set their default text size to be bigger than normal, your site should accommodate them by having text that resizes accordingly.</p>
+      <h4>Points</h4>
+      <p>If you’ve ever used text in a graphics editor or used a word processor you should be aware of how text size is defined in points (abbreviated to pt). The default size for text in most word processors is about 12pt. Example:</p>
+      <code>p {font-size: 30pt; }</code>
+      <p>This will create some rather impressive big text.</p>
+      <p>Points were really introduced to CSS for the benefit of print designers used to the unit. They offer good control, but are most appropriate for sizing the text in a print stylesheet. The big problem which stands in the way of them being a good unit for screen text is that the font size cannot be modified using your browser’s font size buttons for users of Internet Explorer. This is a big problem for lots of people, especially those with impaired eyesight — it may make your content inaccessible.</p>
+     <p>
+If you’re going to use points — and you shouldn’t — don’t specify main body text anything lower than 10pt, or there’ll be trouble. It’s best that you don’t use points at all — a better option is...</p>
+      <h4>Pixels</h4>
+      <p>If you’ve been designing for any length of time you’ll probably have learnt all about pixels — all your layout elements will be specified in them. Formatting your text with them, while excellent on-screen, can cause problems when printing out a web page. Often each character will only print as a single dot. Not good.</p>
+    <code>h2 {font-size: 17px; }</code>
+      <p>Pixel-defined text will, however, circumvent the normal problem of text appearing slightly smaller through a Mac operating system as opposed to a Windows one. If you’re sure your content will be used purely online, this is a good choice. However, be aware of the drawbacks: Internet Explorer users will not be able to resize your text. Use ems for best results.</p>
+      <h4>More Units</h4>
+      <p>There are a few other units of text-measurement that are less widely used, but they may give you the options you need:</p>
+      <li>in is inches</li>
+      <li>cm is centimetres</li>
+      <li>mm is millimetres</li>
+      <li>pc is picas</li>
+      <li>ex is x-height</li>
+  <h4>Keywords</h4>
+      <p>There are a number of keywords that are part of the CSS specifications that you can use to size your text without having to get into measuring things out with units. They’re less precise, but friendly and helpful when the text size isn’t entirely critical. There are seven of these keywords, and they work similarly to the old &lt;font size&gt; values. You define them like so, and the possible values are below:</p>
+      <code>b {font-size: large; }</code>
+      <li>xx-small</li>
+      <li>x-small</li>
+      <li>small</li>
+      <li>medium</li>
+      <li>large</li>
+      <li>x-large</li>
+      <li>xx-large</li>
+      <p>What these values correspond to has been left open by the » W3C, and so the browsers display text differently. Thankfully, they allow the reader to adjust the size in their browser.
+</p>
+      <p>
+You can also use the two relative values smaller and larger. Like em values, these affect text relative to the governing value of the parent element.</p>
+      <h4>Percentages</h4>
+      <p>Percentage values are again relative to the size of the parent value, and very similar to em values. If you had the code</p>
+      <code>div {font-size: 20px; }
+p {font-size: 200%; }</code>
+      <p>Every paragraph inside your div would be sized 40px. Simple.
+</p>
+      <p>
+And that’s the lot. You get a load of flexibility, don’t you? Just be sure to always have a look at your page in at least another browser and if possible across platforms to make sure what looks fine on one doesn’t look wrong on the other, as sizing is still a bit inconsistent.</p>
+      </article>
+      </section>
+<section class="main-section" id="Special_Effects">
+    <header>Special Effects</header>
+    <article>
+      <p> We’ll start off with the not-so special effects like boldness and italics here, and go on to the newest formatting options.</p>
+      <h4>Italics</h4>
+      <p>The CSS command for italics is font-style. You can set it to either italic, oblique or normal. Thus:</p>
+      <code>
+      p {font-style: italic; }
+      </code>
+<p>Italic and oblique will cause the browser to look for that version of a font on your system (you should specify the version you think will be there). If one doesn’t exist it may generate the font for you. Setting it to normal will override any inherited values.</p>
+      <h4>Boldness</h4>
+      <p>The property that controls the boldness of text is font-weight. You get many options for this beyond our old choices of ‘bold’ and ‘not bold’.</p>
+<code>
+th {font-weight: bold; }
+        </code>
+        <p>
+That is the basic boldness command that will output bold text like you could have before. Using normal will allow you to go back to regular-weighted text.
+      </p>
+      <p>
+You can also specify the weight using a number between 100 and 900, as long as it’s a multiple of 100. Normal text has a boldness of 400, so you can imagine what going up or down means. The distinct values for each number are up to the browser, and some fonts will not have this option available, as they don’t have all the weights built in. Stick with common fonts like Arial (and a larger than normal font size) and it should work and be noticeable. These levels are not fully supported in browsers yet though.
+      </p>
+      <p>
+Also, there are two relative values for incrementing or decrementing the boldness by one level. They are lighter and bolder.</p>
+      <h4>Capitalisation</h4>
+      <p>There are two properties that allow you to automatically set the capitalisation of your text. First, font-variant allows you to set all your characters in small versions of capital letters.</p>
+<code>
+p {font-variant: small-caps; }
+      </code>
+<p>
+That would create text like this. It looks cool, and works well for acronyms, like nato. The second property is text-transform.
+</p>
+      <code>
+div {text-transform: uppercase; }
+      </code>
+      <p>
+Possible values are uppercase, which makes all the letters capitals; lowercase, which makes them all small characters; capitalize, which will capitalize the first letter in every word; and none, which will override any inherited transformation.</p>
+      <h4>Final Effects</h4>
+      <p>The last of the formatting properties is text-decoration. With this, finally, you can get rid of the underlines under links, as well as add lines and other effects to regular text.</p>
+<code>
+a {text-decoration: none; }
+      </code>
+<p>
+The values available are none, which takes away any extra formatting and leaves only normal text; underline, which adds a simple underline; overline, which adds a line over the text; line-through, which creates a strike-through effect; and blink, which is the CSS equivalent of HTML’s most hated tag, Netscape’s &lt;blink&gt;, and makes the text flash on and off. It’s not supported by Internet Explorer.
+        </p>
+        <p>
+If you want to take away the underlines on your links, read our short non-underlined links tutorial.</p>
+  </article>
+  </section>
+  <section class="main-section" id="Text_Alignment">
+    <header>Text Alignment</header>
+    <article>
+      <p>Just like old times, you can align your text to the sides and centre. The property for this is text-align. It will only work on block-level elements — i.e. those which add line breaks around themselves, like h1, p and div.</p>
+<code>
+div {text-align: center; }
+      </code>
+<p>
+Your options are the usual bunch of left, right and center. You also have a new option which I use here on HTML Source, justify. See how all the text ends in a straight right margin here? That’s the text being justified over the available space.</p>
+      <h4>Vertical Alignment</h4>
+      <p>This command allows values like img’s align attribute did in HTML. Vertical-align defines the alignment of an element (not just text this time) in relation to its parent. The values proposed are:</p>
+
+       <li> top aligns the top of the element with the tallest parent element on the line.</li>
+       <li> bottom aligns the bottom of the element with the lowest parent element on the line.</li>
+        <li>text-top aligns the top of the element with the top of the font of the parent element.</li>
+       <li> text-bottom aligns the bottom of the element with the bottom of the font of the parent element.</li>
+        <li>baseline aligns the baseline of the element with the baseline of the parent element.</li>
+       <li> middle aligns the midpoint of the element with the middle of the parent element.</li>
+<p>The code below will align text to the top of an image entered alongside the text, and add a margin around the image so it has some space to breathe.</p>
+<code>
+img {vertical-align: top; margin: 10px; }
+      </code>
+
+      <p>Text can also be turned into superscript and subscript:</p>
+
+        <li>sub puts the element in subscript.</li>
+        <li>super puts the element in superscript.</li>
+       <p> This is useful if writing about mathematical equations and the like:</p>
+<code>
+.superscript {vertical-align: super; }
+      </code>
+<code>
+&lt;p>Einstein’s most famous equation was E=mc<span class="superscript">2</span>&lt;/p>
+        </code>
+<p>
+Which will yield:
+      </p>
+      <code>
+<p>Einstein’s most famous equation was E=mc2</p>
+      </code>
+    </article>
+  </section>
+  <section class="main-section" id="Text_Layout">
+    <header>Text Layout</header>
+    <article>
+      <p>But wait there’s more! With CSS comes another first: being able to control the exact spacing between your characters, words and lines. You now have even more ways to lay out your text for optimum readability and style. First up, letter-spacing:</p>
+<code>
+p {letter-spacing: 3px; }
+      </code>
+<p>
+To create this groovy effect. Swish, no? You may know letter-spacing by its other name, kerning also. The value you set it to will be added onto the current browser default. You can use any of the units from above here too. Word-spacing is the same, it’ll just add more space between all your words. The same units are usable. Sadly, it isn’t very well supported, so you may not see any effects.</p>
+      <h4>Indents</h4>
+      <p>No more do you need to keep adding in all those &nbsp;s at the start of your paragraphs! With the text-indent property you can have your browser do it for you.</p>
+<code>
+p {text-indent: 10px; }
+      </code>
+<p>
+This command indents the first line in every paragraph (or other block-level element you might want to use). Again, you can use any of the length units from above. You can use a negative value too to create a hanging-indent, where the first word or two start more to the left than the actual paragraph. Be aware of browser bugs here though. Proper margins are discussed in the margins and padding tutorial.</p>
+      <h4>Line Spacing</h4>
+      <p>Next we have line-height, or as you may know it, leading. The value you set this to is the space between the baselines of two lines of text (read about the parts of letters from this » typeface tutorial), and your specified value completely replaces the browser default.
+</p>
+     <p>   There are three ways to specify a line-height, through numbers, units or percentages.</p>
+<code>
+p {font-size: 10px; line-height: 2em; }
+      </code>
+<p>That example uses ems. Your browser multiplies the number you give it by the font size of the text and sets the spacing between lines to this value. This means your spacing will be relative to your text size. You can use decimals for the value too.</p>
+<p>
+Specifying it in units involves using any of the units from earlier on in this tutorial to set the spacing. Percentages are relative to the font size, so 200% leading with 10pt text creates a 20pt space between lines. You can get text to overlap itself using this property, but it isn’t advisable due to differences in browser interpretation. If you want to overlap elements, read the layers tutorial.</p>
+    </article>
+  </section>
+  <section class="main-section" id="Shorthand_Properties">
+  <header>Shorthand Properties</header>
+    <article>
+        <p>You can specify many of these properties in a shorthand property, font, like this:</p>
+<code>
+p {font: bold italic 14px/1.2 Georgia, sans-serif; }
+        </code>
+<p>
+The rule above is equivalent to the rules below, though a good deal more efficient.
+        </p>
+<code>
+p {font-weight: bold; font-style: italic; font-size: 14px; line-height: 1.2; font-family: Georgia, sans-serif; }
+          </code>
+<p>
+This one property can be used to define the values for font-weight, font-variant, font-style, font-size, line-height and font-family.</p>
+<p>
+To use the font property, you must specify values for the font-size and font-family. If a line-height value is to be supplied, it must come directly after the font-size value, separated by a slash. All of the other properties are optional, and can come in any order; but must be specified before the font-size value. In simple terms, here’s the syntax, with brackets around the optional values:</p>
+<code>
+          font: [weight] [style] [variant] size [ / line-height] family;</code>
+        </article>
+        </section>
+ <section class="main-section" id="Lists">
+    <header>Lists</header>
+    <article>
+      <p> CSS also has something to offer to snazz up your bulleted lists. Now you can use images as bullets and decide on what bullet-style your lists use through CSS instead of messing about with presentational attributes. The property that’s going to do all this for us is list-style. This is the shorthand property, which can be broken down into list-style-type, list-style-position and list-style-image if you only need to modify one or two aspects of the list.</p>
+<p>
+The list-style-type property has the same results as the old HTML attributes had. There are specific values for both ols and uls. You can guess which correspond to which. Available values are: disc, square, circle; decimal, lower-roman, upper-roman, lower-alpha, upper-alpha, none. Here’s the HTML and CSS for a list with uppercase alphabetic bullets:</p>
+<code> 
+  &lt;ol class="upperalphalist">
+  &lt;li>Since this is the first list item, it will be bulletted with an “A”&lt;/li>&lt;/ol>
+</code> 
+<code>
+.upperalphalist {list-style-type: upper-alpha; }
+</code>
+    <p>And here’s how it looks:</p>
+<p>
+  A.Since this is the first list item, it will be bulletted with an “A”</p>
+      <p>
+You can set list-style-position to inside or outside to set whether the bullet is in the margin on its own or whether the text wraps in under it on the second line.</p>
+    </article>
+  </section>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <p>The source for this documentation page is by Ross Shannon from<a href="http://www.yourhtmlsource.com/stylesheets/csstext.html" target="_blank"> HTML Source.</a> </p>
+      </article>
+        </section>
+</main>
+  <script src='https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js'></script>
+
+  
+
+</body>
+
+</html>

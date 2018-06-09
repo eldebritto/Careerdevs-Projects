@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Survey-Form  Test: for freecodecamp.org</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <h1 id="title">Survey Form</h1>
+<div id="form-outer">
+  <p id="description">
+How do you view the value of a college degree today?
+  </p>
+<p2> For 4-year college grads/recent grads</p2>
+  <form id="survey-form">
+    <div class="rowTab">
+      <div class="labels">
+        <label id="name-label" for="name">* Name: </label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your first name" required>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label id="email-label" for="email">* Email: </label>
+      </div>
+      <div class="rightTab">
+        <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email">
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label id="number-label" for="age">* Age: </label>
+      </div>
+      <div class="rightTab">
+        <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
+      </div>
+    </div>
+<div class="rowTab">
+      <div class="labels">
+        <label for="degree">What is your degree classification?</label>
+      </div>
+<div class="rightTab">
+        <select id="dropdown" name="degree" class="dropdown">
+      <option disabled value>Select an option</option>
+      <option  value="BA">Bachelor of Arts and Sciences</option>
+      <option value="BS">Bachelor of Science</option>
+</select>
+      </div>
+    </div>
+
+    <div class="rowTab">
+      <div class="labels">
+        <label for="currentPos">Describe your current employment status?</label>
+      </div>
+<div class="rightTab">
+        <select id="dropdown" name="currentPos" class="dropdown">
+      <option disabled value>Select an option</option>
+      <option  value="looking">Looking</option>
+      <option value="job">Part Time</option>
+      <option value="job2">Full Time</option>
+      <option value="entreprenuer">Business owner</option>
+      <option value="Home">Homemaker</option>
+    </select>
+      </div>
+    </div>
+<div class="rowTab">
+      <div class="labels">
+        <label for="userRating">* How likely are you to recommend a 4-year college degree as a career path today?</label>
+      </div>
+      <div class="rightTab">
+        <ul style="list-style: none;">
+          <li class="radio"><label>Absolutely<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Maybe<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Never<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+        </ul>
+      </div>
+    </div>
+<div class="rowTab">
+      <div class="labels">
+        <label for="userRating">* What would be your advice to a high school senior today?</label>
+      </div>
+      <div class="rightTab">
+        <ul style="list-style: none;">
+          <li class="radio"><label>Certificate Program<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Trade School<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Associate Degree<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Start Your Own Business<input name="radio-buttons" value="4"  type="radio" class="userRatings" ></label></li>
+
+        </ul>
+      </div>
+    </div>
+<div class="rowTab">
+<div class="labels">
+<label for="recommend">What college majors would you recommend to someone interested in pursuing a bachelor’s degree?<br>(Check all that apply):</label>       </div>
+<div class="rightTab">
+        <ul id="recommend" style="list-style: none;">
+          <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">Computer Science</label></li>
+          <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">Biology</li>
+          <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">Economics</label></li>
+          <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">Government/Political Science</label></li>
+          <li class="checkbox"><label><input name="prefer" value="5" type="checkbox" class="userRatings">Communications</label></li>
+          <li class="checkbox"><label><input name="prefer" value="6" type="checkbox" class="userRatings">Nursing</label></li>
+          <li class="checkbox"><label><input name="prefer" value="7" type="checkbox" class="userRatings">Art</label></li>
+          <li class="checkbox"><label><input name="prefer" value="8" type="checkbox" class="userRatings">Psychology</label></li>
+          <li class="checkbox"><label><input name="prefer" value="9" type="checkbox" class="userRatings">Business</label></li>
+              </ul>
+      </div>
+<div class="rowTab">
+      <div class="labels">
+        <label for="comments">Any Comments?</label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+      </div>
+    </div>
+    <button id="submit" type="submit">Submit</button>
+  </form>
+</div>
+  <script src='https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

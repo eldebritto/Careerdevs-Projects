@@ -1,0 +1,192 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  margin: 0;
+  font-family: Arial, "Helvetica Neue" , Helvetica, sans-serif;
+  font-size: 18px;
+  color: #0d264f;
+  line-height: 1.2;
+}
+#header{
+  background-image:url(https://images.pexels.com/photos/6629/mountains-nature-sky-sunny.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size:cover;
+  background-position:center;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding: 0px 20px;
+  
+}
+#nav-bar {
+  position:fixed;
+  top:0;
+  right:0;
+}
+
+#header h1{
+ font-size: 70px;
+ line-height: 1.6; 
+ color: #fff;
+}
+#header p{
+  font-size: 20px;
+  color: #0d264f;
+}
+
+#form .btn{
+  font-size: 18px;
+  text-decoration:none;
+  color:#0d264f;
+  border:#0d264f 1px solid;
+  padding: 10px 20px;
+  border-radius:10px;
+  margin-top:30px;
+  
+}
+#form .btn:hover{
+  background:#0d264f;
+  color:#ffff;
+}
+
+#section-a{
+  padding:20px;
+  background:#F74823;
+  color:#fff;
+  text-align:center;
+}
+
+
+#section-b{
+  display:flex;
+}
+#section-b div{
+  padding:20px;
+}
+#section-b .box-1, #section-b .box-3{
+  background:#F74823;
+  color:#ffff;
+}
+#section-b .box-2{
+  background:#0faa5d;
+
+}
+
+#section-f{
+  padding:20px;
+  background:#F74823;
+  color:#fffff;
+  text-align:center;
+}
+#section-f .button{
+  font-size:;
+  text-decoration:none;
+  color:#ffff;
+  border:#ffff 1px solid;
+  padding:10px 20px;
+  border-radius:10px;
+  margin-top:40px;
+}
+#section .button:hover{
+  background:#0faa5d;
+  color:#ffffff;
+}
+.logo{
+  position:absolute;
+  top:0;
+  left:0;
+}
+.logo {
+  width: 10vw;
+}
+@media (max-width: 30px) {
+  .logo {
+    margin-top: 15px;
+    width: 50%;
+    position: fixed;
+   
+  }
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  display: fixed;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+  
+}
+@media (max-width: 30px) {
+  .logo img {
+    margin: 0 auto;
+    padding:0;
+  }
+}
+
+nav{
+  font-weight: 400;
+}
+@media (max-width: 650px) {
+  nav{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+  nav li {
+    padding-bottom: 5px;
+  }
+}
+nav ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+@media (max-width: 650px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+/* Form */
+#form {
+    padding: 5px;
+}
+#form p {
+    float: left;
+}
+
+#form form {
+    float: right;
+    margin-top: 10px;
+}
+
+#form input[type="email"] {
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+/* Video */
+#video {
+    width: 420px;
+    height: 315px;   
+    display: block; 
+    margin: 35px auto 35px auto; 
+}
+
+@media(max-width: 500px) {
+    #video {
+        width: 95%;
+        height: auto;
+    }
+}
